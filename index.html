@@ -3,15 +3,29 @@
 <head>
     <title>QR Code Generator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>QR Code Generator</h1>
-        <input type="text" id="urlInput" placeholder="Enter URL" autocorrect="off">
-        <button id="generateBtn">Generate QR Code</button>
-        <div id="qrcode"></div>
-        <a id="downloadBtn" style="display:none;">Download QR Code</a>
+    <div class="app-container">
+        <div class="generator-container">
+            <h1 class="title">QR Code Generator</h1>
+            <div class="input-group">
+                <input type="text" id="urlInput" placeholder="Enter URL or text" autocorrect="off">
+            </div>
+            <button id="generateBtn" class="btn btn-primary">
+                <span class="btn-label">Generate</span>
+            </button>
+            <div id="qrcode" class="qrcode-display"></div>
+            <a id="downloadBtn" class="btn btn-secondary" style="display:none;">
+                <span class="btn-label">Download QR Code</span>
+            </a>
+        </div>
+
+        <div class="history-container">
+            <h2 class="history-title">History</h2>
+            <div id="qrHistory" class="qr-history"></div>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
